@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación Física de Halloween</title>
+
+    <link rel="icon" type="image/png" href="assets/vampiro.png">
+
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Encabezado superior -->
+    <header class="game-header">
+        <h1>Halloween Simulation 2D</h1>
+        <p>Haz clic en cualquier objeto para destruirlo en chispas</p>
+    </header>
+
+    <!-- Panel de estadísticas e interactividad superior -->
+    <section class="stats-panel">
+        <div class="stat-badge">
+            <span class="stat-icon">🎃</span>
+            <span class="stat-label">Objetos Activos:</span>
+            <span id="stat-count" class="stat-value">25</span>
+        </div>
+        <div class="stat-badge">
+            <span class="stat-icon">💥</span>
+            <span class="stat-label">Colisiones:</span>
+            <span id="stat-collisions" class="stat-value">0</span>
+        </div>
+        <div class="stat-badge">
+            <span class="stat-icon">👆</span>
+            <span class="stat-label">Clics Usados:</span>
+            <span id="stat-clicks" class="stat-value">0</span>
+        </div>
+        <div class="stat-badge">
+            <span class="stat-icon">👻</span>
+            <span class="stat-label">Eliminados:</span>
+            <span id="stat-destroyed" class="stat-value">0</span>
+        </div>
+        <div class="stat-badge">
+            <span class="stat-icon">⚡</span>
+            <span class="stat-label">FPS:</span>
+            <span id="stat-fps" class="stat-value">60</span>
+        </div>
+        <button id="btn-audio" class="audio-toggle-btn">
+            🎵 Música: OFF
+        </button>
+    </section>
+
+    <!-- Contenedor del canvas con dimensiones ampliadas -->
+    <main class="canvas-wrapper">
+        <canvas id="simulationCanvas" width="1500" height="1080"></canvas>
+    </main>
+
+    <!-- Pie de página con instrucciones -->
+    <footer class="game-footer">
+        <div class="instructions">
+            <p><strong>Instrucciones:</strong> Los 25 entes de Halloween se mueven libremente en 4 patrones (Arriba, Abajo, Diagonales y Círculos) rebotando entre sí y contra los bordes. Al destruir uno, aparecerá automáticamente otro en un lugar aleatorio del mapa.</p>
+        </div>
+        <p class="copyright">Octavio Armando Reyes Alvarez 24200223</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+:root {
+    --bg-color: #0b0712;
+    --card-bg: rgba(22, 14, 38, 0.85);
+    --primary-orange: #ff6b00;
+    --accent-purple: #9b51e0;
+    --neon-green: #2ed573;
+    --text-light: #f1f2f6;
+    --text-muted: #a4b0be;
+    --border-color: rgba(255, 107, 0, 0.4);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: 
+        radial-gradient(circle at 15% 20%, rgba(155, 81, 224, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(255, 107, 0, 0.15) 0%, transparent 40%);
+    color: var(--text-light);
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='%23ff6b00' stroke='%23000000' stroke-width='1.5'><path d='M12 2C7 2 4 6 4 10v6c0 1.1.9 2 2 2h2v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3h2v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3h2c1.1 0 2-.9 2-2v-6c0-4-3-8-8-8zm-3 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-3 4c-1.5 0-2.5-.5-3-.5s-1.5.5-3 .5c0-1.5 1-3 3-3s3 1.5 3 3z'/></svg>") 12 12, auto;
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.game-header h1 {
+    font-family: 'Creepster', cursive;
+    font-size: 2.8rem;
+    color: var(--primary-orange);
+    text-shadow: 0 0 12px rgba(255, 107, 0, 0.6), 0 0 24px rgba(155, 81, 224, 0.4);
+    letter-spacing: 2px;
+}
+
+.game-header p {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+.stats-panel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+    max-width: 1000px;
+}
+
+.stat-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-value {
+    color: var(--primary-orange);
+    font-weight: 700;
+}
+
+.audio-toggle-btn {
+    background: rgba(255, 107, 0, 0.15);
+    color: var(--text-light);
+    border: 1px solid var(--primary-orange);
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.audio-toggle-btn:hover {
+    background: var(--primary-orange);
+    color: #000;
+}
+
+.audio-toggle-btn.active {
+    background: rgba(46, 213, 115, 0.2);
+    border-color: var(--neon-green);
+    color: var(--neon-green);
+}
+
+.canvas-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+canvas {
+    background-color: #0e0919;
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(155, 81, 224, 0.25);
+    display: block;
+    max-width: 110vw;
+    max-height: 100vh;
+    width: 1200px;
+    height: auto;
+}
+
+.game-footer {
+    text-align: center;
+    max-width: 800px;
+    margin-top: 10px;
+}
+
+.instructions {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.instructions strong {
+    color: var(--primary-orange);
+}
+
+.copyright {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.3);
+}
